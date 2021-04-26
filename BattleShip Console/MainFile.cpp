@@ -67,7 +67,7 @@ int main() {
 
 				std::cout << "First player shoots! " << std::endl;
 				printMap(firstPlayerMap, secondPlayerMap, !realPlayer);
-				firstPlayerShotSuccess = (!realPlayer ? playerShot(secondPlayerMap) : computerShot(secondPlayerMap, diff, damage1));
+				firstPlayerShotSuccess = (realPlayer ? playerShot(secondPlayerMap) : computerShot(secondPlayerMap, diff, damage1));
 
 				Sleep(250);
 				if (firstPlayerShotSuccess)
@@ -96,7 +96,7 @@ int main() {
 		system("CLS");
 		printMap(firstPlayerMap, secondPlayerMap, !realPlayer);
 
-		if (winner) {
+		if (winner == 1) {
 			std::cout << "First player won! " << std::endl;
 
 			if (realPlayer) {
