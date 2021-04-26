@@ -1,5 +1,6 @@
 #include "GameProcess.h"
 
+
 bool isPossible(int** map, int ship, int row, int col, int direct) {
 	if (direct == 1) {
 		if (row + 4 - ship >= 10)
