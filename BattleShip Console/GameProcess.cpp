@@ -237,7 +237,7 @@ int checkWinner(int** mapPlayer, int** mapComputer) {
 
 	count = 0;
 
-	//player wins
+	//computer wins
 	for (int i = 0; i < 10; i++)
 		for (int j = 0; j < 10; j++)
 			if (mapPlayer[i][j] == 2)
