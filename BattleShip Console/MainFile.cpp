@@ -67,7 +67,7 @@ int main() {
 
 				std::cout << "First player shoots! " << std::endl;
 				printMap(firstPlayerMap, secondPlayerMap, !realPlayer);
-				firstPlayerShotSuccess = (realPlayer ? playerShot(secondPlayerMap) : computerShot(secondPlayerMap, diff, damage1));
+				firstPlayerShotSuccess = (!realPlayer ? playerShot(secondPlayerMap) : computerShot(secondPlayerMap, diff, damage1));
 
 				Sleep(250);
 				if (firstPlayerShotSuccess)
@@ -96,16 +96,17 @@ int main() {
 		system("CLS");
 		printMap(firstPlayerMap, secondPlayerMap, !realPlayer);
 
-		if (winner == 1) {
+		if (winner) {
 			std::cout << "First player won! " << std::endl;
 
 			if (realPlayer) {
 				std::cout << "Your score is " << temp.score << std::endl;
 				int count = loadFromFile(fn, accountsList);
+
 				bool added = false;
 
 				for (int i = 0; i < count; i++) {
-					if (accountsList[i].name == temp.name) {
+					if (!strcmp(accountsList[i].name, temp.name)) {
 						if (accountsList[i].score < temp.score)
 							accountsList[i] = temp;
 
