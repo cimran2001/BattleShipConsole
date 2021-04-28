@@ -93,6 +93,9 @@ int main() {
 			}
 		} while (!(winner = checkWinner(firstPlayerMap, secondPlayerMap)));
 
+		if (realPlayer)
+			std::cout << "Score: " << temp.score << std::endl;
+
 		system("CLS");
 		printMap(firstPlayerMap, secondPlayerMap, !realPlayer);
 
