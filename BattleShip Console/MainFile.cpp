@@ -41,7 +41,7 @@ int main() {
 		int winner;
 		int** firstPlayerMap = genMap(), ** secondPlayerMap = genMap();
 		bool firstPlayerShotSuccess = false, secondPlayerShotSuccess = rand() % 2;
-		bool realPlayer = !playerOrComputer(), shipsByPlayer = false;
+		bool realPlayer = playerOrComputer(), shipsByPlayer = false;
 		int diff = setDifficulty();
 		int playerPoints = 0;
 

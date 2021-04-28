@@ -41,7 +41,7 @@ bool playerOrComputer() {
 		std::cin >> result;
 	} while (result > 2 || result < 1);
 
-	return result == 2;
+	return result == 1;
 }
 
 bool shipsPlacedByPlayer() {
